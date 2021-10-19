@@ -65,9 +65,15 @@ class HumanPlayer < Player
             puts "tu n'a rien trouvé ..."
         elsif dée >=2 || dée <= 5
             @life_point = @life_point + 50
+            if @life_point > 100
+                @life_point = 100
+            end
             puts "Bravo, tu as trouvé un pack de +50 points de vie !"
         elsif dée == 6
             @life_point = @life_point + 80
+            if @life_point > 100
+                @life_point = 100
+            end
             puts "Waouw, tu as trouvé un pack de +80 points de vie !"
         end
     end
